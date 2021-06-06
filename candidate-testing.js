@@ -103,7 +103,7 @@ Correct Answer: ${correctAnswers[4]}`)
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  //console.log(candidateName + ", thank your for entering your name!")
+  console.log(candidateName + ", thank your for entering your name!")
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
