@@ -9,10 +9,11 @@ let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = " ";
 let questions = [
-  "Who was the first American woman in space? ",
-  "True or false: 5 kilometer == 5000 meters? ",
-  "(5 + 3)/2 * 10 = ? ","Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
-  "What is the minimum crew size for the ISS? "
+  "Who was the first American woman in space?",
+  "True or false: 5 kilometer == 5000 meters?",
+  "(5 + 3)/2 * 10 = ? ",
+  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?",
+  "What is the minimum crew size for the ISS?"
 ];
 let correctAnswers = [
   "Sally Ride",
@@ -20,7 +21,9 @@ let correctAnswers = [
   "40",
   "Trajectory",
   "3"
-];
+]
+let strCorrectAnswers = correctAnswers.join().toLowerCase();
+let arrCorrectAnswers = strCorrectAnswers.split(",");
 let candidateAnswers = ["","","","",""];
 
 function askForName() {
@@ -44,12 +47,8 @@ function askQuestion() {
 for (i = 0;i < 5;i++){
   candidateAnswers[i] = input.question(questions[i])
   
-}/* let strCandidateAnswers = candidateAnswers.join().toLowerCase()
-console.log(strCandidateAnswers)
-let arrCandidateAnsLower = strCandidateAnswers.split(",")
-console.log(arrCandidateAnsLower)*/ 
 }
-
+}
 
 function gradeQuiz(candidateAnswers) {
 console.log(`
@@ -78,11 +77,14 @@ Correct Answer: ${correctAnswers[4]}`)
 
 
   let grade = 0;
+
   
   for (i = 0; i < correctAnswers.length ;i++){
-     strCandidateAnswers = candidateAnswers.join().toLowerCase();
-     arrCandidateAnsLower = strCandidateAnswers.split(",");
-    if(arrCandidateAnsLower[i] === correctAnswers[i]){
+    let strCandidateAnswers = candidateAnswers.join().toLowerCase()
+    //console.log(strCandidateAnswers)
+    let arrCandidateAnsLower = strCandidateAnswers.split(",")
+    //console.log(arrCandidateAnsLower)
+    if(arrCandidateAnsLower[i] === arrCorrectAnswers[i]){
       grade +=1
     }
     
