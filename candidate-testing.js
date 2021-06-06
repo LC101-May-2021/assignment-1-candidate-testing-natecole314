@@ -15,10 +15,10 @@ let questions = [
   "What is the minimum crew size for the ISS? "
 ];
 let correctAnswers = [
-  "sally ride",
+  "Sally Ride",
   "true",
   "40",
-  "trajectory",
+  "Trajectory",
   "3"
 ];
 let candidateAnswers = ["","","","",""];
@@ -84,7 +84,7 @@ Correct Answer: ${correctAnswers[4]}`)
      arrCandidateAnsLower = strCandidateAnswers.split(",");
     if(arrCandidateAnsLower[i] === correctAnswers[i]){
       grade +=1
-    }
+    } 
     
   }
   console.log()
