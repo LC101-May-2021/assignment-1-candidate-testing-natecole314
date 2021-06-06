@@ -85,12 +85,12 @@ Correct Answer: ${correctAnswers[4]}`)
     let arrCandidateAnsLower = strCandidateAnswers.split(",")
     //console.log(arrCandidateAnsLower)
     if(arrCandidateAnsLower[i] === arrCorrectAnswers[i]){
-      grade +=1
+      grade +=20
     }
     
   }
   console.log()
-  console.log(`>>> Overall Grade: ${(grade/5)*100}% (${grade} of 5 responses correct) `)
+  console.log(`>>> Overall Grade: ${(grade)}% (${grade/20} of 5 responses correct) `)
   if(grade >= 4){
     console.log(">>> Status: PASS <<<")
   }else{
